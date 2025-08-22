@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia Colorido de Markdown</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    pre {
+      background-color: #1e293b;
+      color: #f8fafc;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+    }
+    .highlight {
+      background-color: #fef9c3;
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.25rem;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-purple-100 via-pink-50 to-yellow-50 text-gray-800">
+
+  <header class="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-6 text-center rounded-b-xl shadow-lg">
+    <h1 class="text-3xl font-bold drop-shadow-lg"> Guia de Markdown</h1>
+   
+  </header>
+
+  <main class="p-6 max-w-5xl mx-auto">
+
+    <!-- Introdução -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-2 text-purple-700">O que é Markdown?</h2>
+      <p class="text-purple-600 text-lg">Markdown é uma linguagem de marcação leve para deixar seu texto <span class="highlight">bonito e organizado</span> sem esforço. </p>
+    </section>
+
+    <!-- Cabeçalhos -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4 text-pink-600">1. Cabeçalhos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <p class="font-semibold mb-2 text-pink-700">Como escrever:</p>
+          <pre><code># Cabeçalho 1
+## Cabeçalho 2
+### Cabeçalho 3</code></pre>
+        </div>
+        <div>
+          <p class="font-semibold mb-2 text-pink-700">Como aparece:</p>
+          <h1 class="text-3xl font-bold text-purple-800">Cabeçalho 1</h1>
+          <h2 class="text-2xl font-semibold text-purple-700">Cabeçalho 2</h2>
+          <h3 class="text-xl font-medium text-purple-600">Cabeçalho 3</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Negrito e Itálico -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4 text-yellow-600">2. Negrito e Itálico</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <p class="font-semibold mb-2 text-yellow-700">Sintaxe:</p>
+          <pre><code>*Itálico*
+**Negrito**
+***Negrito e Itálico***</code></pre>
+        </div>
+        <div>
+          <p class="font-semibold mb-2 text-yellow-700">Visualização:</p>
+          <p class="italic text-purple-700">Itálico</p>
+          <p class="font-bold text-purple-800">Negrito</p>
+          <p class="italic font-bold text-purple-900">Negrito e Itálico</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Listas -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4 text-green-600">3. Listas</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <p class="font-semibold mb-2 text-green-700">Não ordenadas:</p>
+          <pre><code>- Item 1
+- Item 2
+  - Subitem 2.1</code></pre>
+
+          <p class="font-semibold mt-4 mb-2 text-green-700">Ordenadas:</p>
+          <pre><code>1. Primeiro
+2. Segundo
+3. Terceiro</code></pre>
+        </div>
+        <div>
+          <p class="font-semibold mb-2 text-green-700">Visualização:</p>
+          <ul class="list-disc ml-5 mb-3 text-purple-700">
+            <li>Item 1</li>
+            <li>Item 2
+              <ul class="list-disc ml-5">
+                <li>Subitem 2.1</li>
+              </ul>
+            </li>
+          </ul>
+          <ol class="list-decimal ml-5 text-purple-800">
+            <li>Primeiro</li>
+            <li>Segundo</li>
+            <li>Terceiro</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Links e Imagens -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600">4. Links e Imagens</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <p class="font-semibold mb-2 text-blue-700">Link:</p>
+          <pre><code>[Google](https://www.google.com)</code></pre>
+
+          <p class="font-semibold mt-4 mb-2 text-blue-700">Imagem:</p>
+          <pre><code>![Exemplo](https://via.placeholder.com/150)</code></pre>
+        </div>
+        <div>
+          <p class="font-semibold mb-2 text-blue-700">Visualização:</p>
+          <p><a href="https://www.google.com" class="text-pink-600 underline" target="_blank">Google</a></p>
+          <img src="https://via.placeholder.com/150" alt="Exemplo" class="mt-2 rounded-lg shadow-md">
+        </div>
+      </div>
+    </section>
+
+    <!-- Código -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4 text-red-600">5. Código</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <p class="font-semibold mb-2 text-red-700">Sintaxe:</p>
+          <pre><code>`Código em linha`</code></pre>
+          <pre class="mt-2"><code>```
+Bloco de código
+Linha 2
+```</code></pre>
+        </div>
+        <div>
+          <p class="font-semibold mb-2 text-red-700">Visualização:</p>
+          <p><code>Código em linha</code></p>
+          <pre class="mt-2"><code>Bloco de código
+Linha 2</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Citação -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4 text-pink-500">6. Citação</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <p class="font-semibold mb-2 text-pink-600">Sintaxe:</p>
+          <pre><code>> Esta é uma citação</code></pre>
+        </div>
+        <div>
+          <p class="font-semibold mb-2 text-pink-600">Visualização:</p>
+          <blockquote class="border-l-4 border-pink-400 pl-4 italic text-purple-700 bg-pink-50 p-2 rounded">
+            Esta é uma citação
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    
+
+  </main>
+
+</body>
+</html>
